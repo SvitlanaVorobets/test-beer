@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+  grid-gap: 5px;
+  background-color: #f4eee2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-item{
+  border: 1px solid #DDC07F;
+  margin: 10px;
+  padding: 30px 15px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.date{
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  font-size: 13px;
+  color: darkgrey;
+}
+
+.checkbox{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.beer-detail-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4eee2; 
 }
 
-.App-link {
-  color: #61dafb;
+.beer-info {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.beer-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
+
+.beer-image {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.tagline,
+.first-brewed,
+.abv,
+.ibu,
+.target-fg,
+.target-og,
+.ebc,
+.srm,
+.ph,
+.attenuation-level,
+.volume,
+.boil-volume,
+.method,
+.ingredients,
+.food-pairing,
+.brewers-tips,
+.contributed-by {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333333; 
+}
+
+.method li,
+.ingredients li,
+.food-pairing li {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #333333; 
+}
+
+.method h2,
+.ingredients h2,
+.food-pairing h2 {
+  margin: 8px 0;
+  color: #DDC07F; 
+}
+
